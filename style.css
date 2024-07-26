@@ -1,0 +1,170 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgb(249, 235, 220);
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    background-color: rgb(249, 235, 220);
+    border: 10px solid;
+    border-style: groove;
+    border-width: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    z-index: 1000; 
+
+.nav1, .nav2, .nav3, .nav4 {
+    padding: 1px 20px;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 50px;
+    font-weight: bold;
+    box-shadow: inset;
+}
+
+.nav1:hover, .nav2:hover, .nav3:hover, .nav4:hover {
+    background-color: lightgray;
+}
+
+#title {
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 4s ease-in-out;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.image-wrapper {
+    text-align: center;
+}
+
+.images img {
+    width: 800px;
+    height: 800px;
+    object-fit: cover;
+    border: 6px solid black;
+    border-radius: 30px;
+}
+
+.image-name {
+    margin-top: 10px;
+    font-size: 4em;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#aboutUs h2, #skills h2, #extracurriculars h2, #contact h2 {
+    margin-bottom: 40px; 
+}
+
+#aboutUs, #skills, #extracurriculars, #contact {
+    margin: 0;
+    font-size: 35px;
+    text-align: center;
+}
+
+.extra, .skill, .contact-nahom, .contact-alexis, .contact-rohan {
+    border: 2px solid black;
+    border-radius: 7px;
+    padding: 20px; 
+    width: 300px; 
+    margin: 20px; 
+    box-sizing: border-box;
+}
+
+.skills-container, .contact-info, .extracurriculars-box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%; 
+}
+
+.skill, .extra, .contact-nahom, .contact-alexis, .contact-rohan {
+    flex: 1 1 calc(33.333% - 40px); 
+    box-sizing: border-box;
+}
+
+.skill ul, .extra ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skill li, .extra li {
+    padding: 5px 0;
+}
+
+.more-nahom::before,
+.more-nahom::after,
+.more-alexis::before,
+.more-alexis::after,
+.more-rohan::before,
+.more-rohan::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 200px;
+    font-size: 10em; 
+    color: black; 
+
+}
+
+.more-nahom::before,
+.more-alexis::before,
+.more-rohan::before {
+    top: -20px; 
+    left: -30px; 
+    transform: rotate(90deg);
+}
+
+.more-nahom::after,
+.more-alexis::after,
+.more-rohan::after {
+    bottom: -20px; 
+    right: -30px; 
+    transform: rotate(-90deg);
+}
+
+.more-nahom,
+.more-alexis,
+.more-rohan {
+    border: 3px solid black;
+    border-radius: 7px;
+    width:1100px;
+    margin: 20px auto;
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative; 
+}
+
+@media (max-width: 768px) {
+    .skill, .extra, .contact-nahom, .contact-alexis, .contact-rohan {
+        flex: 1 1 100%;
+    }
+}
+
+
